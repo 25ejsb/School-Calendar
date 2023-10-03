@@ -7,7 +7,7 @@ data = pd.read_csv("data.csv")
 
 @app.route('/')
 def home():
-  return render_template("index.html", data=data)
+  return render_template("index.html", data=data, length=len(data[data.Day == "Monday"].Class.value_counts().index.tolist()))
 
 @app.route("/gettime")
 def gettime():

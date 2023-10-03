@@ -19,6 +19,60 @@
                 <h3>Block {{ i }}</h3>
                 {% endfor %}
             </div>
+            <div class="main-calendar">
+                <div class="days">
+                    {% for i in data.Day.value_counts().index.tolist() %}
+                    <h3>{{ i }}</h3>
+                    {% endfor %}
+                </div>
+                <div class="days-div">
+                    <div class="monday">
+                        {% set details = [data[data.Day == "Monday"].Time.value_counts().index.tolist(), data[data.Day == "Monday"].Class.values.tolist()] %}
+                        {% for i in range(length) %}
+                        <div class="block">
+                            <p>{{ details[0][i] }}</p>
+                            <p>{{ details[1][i] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tuesday">
+                        {% set details2 = [data[data.Day == "Tuesday"].Time.value_counts().index.tolist(), data[data.Day == "Tuesday"].Class.values.tolist()] %}
+                        {% for i in range(length) %}
+                        <div class="block">
+                            <p>{{ details2[0][i] }}</p>
+                            <p>{{ details2[1][i] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="wednesday">
+                        {% set details3 = [data[data.Day == "Wednesday"].Time.value_counts().index.tolist(), data[data.Day == "Wednesday"].Class.values.tolist()] %}
+                        {% for i in range(length) %}
+                        <div class="block">
+                            <p>{{ details3[0][i] }}</p>
+                            <p>{{ details3[1][i] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="thursday">
+                        {% set details3 = [data[data.Day == "Thursday"].Time.value_counts().index.tolist(), data[data.Day == "Thursday"].Class.values.tolist()] %}
+                        {% for i in range(length) %}
+                        <div class="block">
+                            <p>{{ details3[0][i] }}</p>
+                            <p>{{ details3[1][i] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="friday">
+                        {% set details3 = [data[data.Day == "Friday"].Time.value_counts().index.tolist(), data[data.Day == "Friday"].Class.values.tolist()] %}
+                        {% for i in range(length) %}
+                        <div class="block">
+                            <p>{{ details3[0][i] }}</p>
+                            <p>{{ details3[1][i] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

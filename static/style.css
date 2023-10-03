@@ -49,12 +49,13 @@ main h3 {
 }
 
 .calendar {
-    width: 80%;
+    width: 50rem;
     height: 70%;
     border: 2px solid white;
     display: flex;
     justify-content: start;
     align-items: start;
+    overflow: hidden;
 }
 
 .blocks {
@@ -65,4 +66,48 @@ main h3 {
     border: 2px solid white;
     width: 15%;
     height: 100%;
+}
+
+.days {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.days h3 {
+    height: 3rem;
+    width: 20%;
+    font-size: 1.25rem;
+}
+
+.main-calendar {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-calendar p {
+    font-size: .85rem;
+}
+
+.main-calendar .block {
+    height: 2.92rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    border: 2px solid white;
+    flex-direction: column;
+    text-align: center;
+}
+
+.monday, .tuesday, .wednesday, .thursday, .friday {
+    width: 20%;
+}
+
+.days-div {
+    width: 100%;
+    display: flex;
 }
