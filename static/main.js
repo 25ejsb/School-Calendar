@@ -11,5 +11,4 @@ setInterval(async function() {
     promise.then(data => {
         document.querySelector("main h2").textContent = data['Content']
     })
-    
 }, 1000);
