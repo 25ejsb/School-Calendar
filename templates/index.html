@@ -13,6 +13,7 @@
         <div class="panel">
             <h1>Epstein Hillel School</h1>
             <h2></h2>
+            <h4 style="color: #d4d400; font-size: 1.5rem;">Yellow - 8th Special</h4>
             <h4 style="color: #e0464d; font-size: 1.5rem;">Red - 7/8th grade</h4>
             <h4 style="color: #425beb; font-size: 1.5rem;">Blue - 6th grade</h4>
             <h4 style="color: #1aa356; font-size: 1.5rem; margin-bottom: 2rem;">Green - 5th grade</h3>
@@ -20,7 +21,11 @@
             {% set details = [data[data.Day == "Monday"].Time.value_counts().index.tolist(), data[data.Day == "Monday"].Class.values.tolist()] %}
             {% if day == "Monday" and righttime == details[0][i] %}
             <h2 class="student-subjects">
+                {% if details[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% endif %}
                 <h2 class="student-subjects" style="color: #425beb; margin-bottom: 0;">6th - {{ details[1][i].split(" - ")[3] | safe }}</h2><br class="student-subjects">
                 <h2 class="student-subjects" style="color: #1aa356; margin-bottom: 0;">5th - {{ details[1][i].split(" - ")[5] | safe }}</h2><br class="student-subjects">
             </h2>
@@ -28,7 +33,11 @@
             {% set details2 = [data[data.Day == "Tuesday"].Time.value_counts().index.tolist(), data[data.Day == "Tuesday"].Class.values.tolist()] %}
             {% if day == "Tuesday" and righttime == details2[0][i] %}
             <h2 class="student-subjects">
+                {% if details2[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details2[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details2[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% endif %}
                 <h2 class="student-subjects" style="color: #425beb; margin-bottom: 0;">6th - {{ details2[1][i].split(" - ")[3] | safe }}</h2><br class="student-subjects">
                 <h2 class="student-subjects" style="color: #1aa356; margin-bottom: 0;">5th - {{ details2[1][i].split(" - ")[5] | safe }}</h2><br class="student-subjects">
             </h2>
@@ -36,7 +45,11 @@
             {% set details3 = [data[data.Day == "Wednesday"].Time.value_counts().index.tolist(), data[data.Day == "Wednesday"].Class.values.tolist()] %}
             {% if day == "Wednesday" and righttime == details3[0][i] %}
             <h2 class="student-subjects">
+                {% if details3[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details3[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details3[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% endif %}
                 <h2 class="student-subjects" style="color: #425beb; margin-bottom: 0;">6th - {{ details3[1][i].split(" - ")[3] | safe }}</h2><br class="student-subjects">
                 <h2 class="student-subjects" style="color: #1aa356; margin-bottom: 0;">5th - {{ details3[1][i].split(" - ")[5] | safe }}</h2><br class="student-subjects">
             </h2>
@@ -44,7 +57,11 @@
             {% set details4 = [data[data.Day == "Thursday"].Time.value_counts().index.tolist(), data[data.Day == "Thursday"].Class.values.tolist()] %}
             {% if day == "Thursday" and righttime == details4[0][i] %}
             <h2 class="student-subjects">
+                {% if details4[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details4[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details4[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% endif %}
                 <h2 class="student-subjects" style="color: #425beb; margin-bottom: 0;">6th - {{ details4[1][i].split(" - ")[3] | safe }}</h2><br class="student-subjects">
                 <h2 class="student-subjects" style="color: #1aa356; margin-bottom: 0;">5th - {{ details4[1][i].split(" - ")[5] | safe }}</h2><br class="student-subjects">
             </h2>
@@ -52,7 +69,11 @@
             {% set details5 = [data[data.Day == "Friday"].Time.value_counts().index.tolist(), data[data.Day == "Friday"].Class.values.tolist()] %}
             {% if day == "Friday" and righttime == details5[0][i] %}
             <h2 class="student-subjects">
+                {% if details5[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details5[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details5[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                {% endif %}
                 <h2 class="student-subjects" style="color: #425beb; margin-bottom: 0;">6th - {{ details5[1][i].split(" - ")[3] | safe }}</h2><br class="student-subjects">
                 <h2 class="student-subjects" style="color: #1aa356; margin-bottom: 0;">5th - {{ details5[1][i].split(" - ")[5] | safe }}</h2><br class="student-subjects">
             </h2>
@@ -87,7 +108,11 @@
                         {% endif %}">
                             <p>{{ details[0][i] }}</p>
                             <p>
+                                {% if details[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[1] | safe }}</p>
+                                {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[1] | safe }}</p>
+                                {% endif %}
                                 <p style="color: #425beb; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[3] | safe }}</p>
                                 <p style="color: #1aa356; font-size: 0.6rem;">{{ details[1][i].split(" - ")[5] | safe }}</p>
                             </p>
@@ -103,7 +128,11 @@
                         {% endif %}">
                           <p>{{ details2[0][i] }}</p>
                           <p>
+                            {% if details2[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                            <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[1] | safe }}</p>
+                            {% else %}
                             <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[1] | safe }}</p>
+                            {% endif %}
                             <p style="color: #425beb; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[3] | safe }}</p>
                             <p style="color: #1aa356; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[5] | safe }}</p>
                         </p>
@@ -119,7 +148,11 @@
                         {% endif %}">
                             <p>{{ details3[0][i] }}</p>
                             <p>
+                                {% if details3[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[1] | safe }}</p>
+                                {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[1] | safe }}</p>
+                                {% endif %}
                                 <p style="color: #425beb; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[3] | safe }}</p>
                                 <p style="color: #1aa356; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[5] | safe }}</p>
                             </p>
@@ -135,7 +168,11 @@
                         {% endif %}">
                             <p>{{ details4[0][i] }}</p>
                             <p>
+                                {% if details4[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[1] | safe }}</p>
+                                {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[1] | safe }}</p>
+                                {% endif %}
                                 <p style="color: #425beb; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[3] | safe }}</p>
                                 <p style="color: #1aa356; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[5] | safe }}</p>
                             </p>
@@ -151,7 +188,11 @@
                         {% endif %}">
                             <p>{{ details5[0][i] }}</p>
                             <p>
+                                {% if details5[1][i].split(" - ")[1].find("/") | string != "-1": %}
+                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[1] | safe }}</p>
+                                {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[1] | safe }}</p>
+                                {% endif %}
                                 <p style="color: #425beb; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[3] | safe }}</p>
                                 <p style="color: #1aa356; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[5] | safe }}</p>
                             </p>
@@ -192,11 +233,19 @@
                                 }
                             })
                             document.querySelectorAll(".student-subjects").forEach(block => block.parentNode.removeChild(block))
-                            var grade7 = document.createElement("h2")
-                            grade7.style = "color: #e0464d; margin-bottom: 0; margin-top: 1rem;"
-                            grade7.textContent = "7-8th - " + newParas[2]
-                            grade7.classList.add("student-subjects")
-                            document.querySelector(".panel").appendChild(grade7)
+                            if (newParas[2].includes("/") === true) {
+                                var grade8 = document.createElement("h2")
+                                grade8.style = "color: #e0464d; margin-bottom: 0; margin-top: 1rem;"
+                                grade8.textContent = "8th Special - " + newParas[2]
+                                grade8.classList.add("student-subjects")
+                                document.querySelector(".panel").appendChild(grade8)
+                            } else {
+                                var grade7 = document.createElement("h2")
+                                grade7.style = "color: #e0464d; margin-bottom: 0; margin-top: 1rem;"
+                                grade7.textContent = "7-8th - " + newParas[2]
+                                grade7.classList.add("student-subjects")
+                                document.querySelector(".panel").appendChild(grade7)
+                            }
                             var grade6 = document.createElement("h2")
                             grade6.style = "color: #425beb; margin-bottom: 0; margin-top: 1rem;"
                             grade6.textContent = "6th - " + newParas[3]
