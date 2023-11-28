@@ -28,7 +28,7 @@ def getdata():
           hour1 += 12
         if hour2 < 8:
           hour2 += 12
-        if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+        if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
           righttime = i
           break
   if day == "Tuesday":
@@ -42,7 +42,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Wednesday":
@@ -56,7 +56,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Thursday":
@@ -70,7 +70,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         print(righttime)
         break
@@ -85,11 +85,12 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
-  emit("retrieve_data", {"day": day, "righttime": righttime}, broadcast=True)
-  
+  print(datetime.now(timeinzone).time())
+  emit("retrieve_data", {"day": day, "righttime": righttime, "time": str(datetime.now(timeinzone).time())}, broadcast=True)
+
 @app.route('/')
 def home():
   timeinzone = timezone("US/Eastern")
@@ -106,7 +107,7 @@ def home():
           hour1 += 12
         if hour2 < 8:
           hour2 += 12
-        if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+        if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
           righttime = i
           break
   if day == "Tuesday":
@@ -120,7 +121,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Wednesday":
@@ -134,7 +135,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Thursday":
@@ -148,7 +149,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         print(righttime)
         break
@@ -163,11 +164,11 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now().time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   return render_template("index.html", data=data, length=len(data[data.Day == "Monday"].Class.value_counts().index.tolist()), day=day, timezone=timeinzone, time=datetime.now(timeinzone).strftime("%I:%M"), righttime=righttime)
-    
+
 
 @app.route("/gettime")
 def gettime():

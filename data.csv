@@ -1,7 +1,7 @@
 Block,Time,Class,Day
 1,8:00-8:30,7/8th grade - Morning Meeting - 6th grade - Morning Meeting - 5th grade - Morning Meeting,Monday
 2,8:30-9:20,7/8th grade - Art - 6th grade - Hebrew - 5th grade - Math,Monday
-3,9:30-10:15,7/8th grade - Z’man Kodesh - 6th grade - Z'man Kodesh - 5th grade - Z'man Kodesh,Monday
+3,9:20-10:15,7/8th grade - Z’man Kodesh - 6th grade - Z'man Kodesh - 5th grade - Z'man Kodesh,Monday
 4,10:15-11:00,7/8th grade - Science - 6th grade - Social Studies - 5th grade - Language Arts,Monday
 5,11:00-11:45,7/8th grade - Social Studies - 6th grade - Science - 5th grade - Social Thinking,Monday
 6,11:45-12:35,7/8th grade - Language Arts - 6th grade - Math - 5th grade - Hebrew,Monday
@@ -20,11 +20,11 @@ Block,Time,Class,Day
 9,1:25-2:10,7/8th grade - Music - 6th grade - Math - 5th grade - Language Arts,Tuesday
 10,2:10-3:00,7/8th grade - Jewish Studies - 6th grade - Tech Time - 5th grade - Math,Tuesday
 1,8:00-8:45,7/8th grade - Social Studies - 6th grade - PE - 5th grade - Jewish Studies,Wednesday
-2,8:45-9:30,7/8th grade - Hebrew - 6th grade - Language Arts - 5th grade - Science,Wednesday
+2,8:45-9:30,7/8th grade - Hebrew/Math - 6th grade - Language Arts - 5th grade - Science,Wednesday
 3,9:30-10:15,7/8th grade - Language Arts - 6th grade - Science - 5th grade - Hebrew,Wednesday
 4,10:15-11:00,7/8th grade - Social Thinking - 6th grade - Hebrew - 5th grade - Math,Wednesday
 5,11:00-11:45,7/8th grade - Science - 6th grade - Jewish Studies - 5th grade - Social Studies,Wednesday
-6,11:45-12:30,7/8th grade - Leadership - 6th grade - Library - 5th grade - Tech Time,Wednesday
+6,11:45-12:35,7/8th grade - Leadership - 6th grade - Library - 5th grade - Tech Time,Wednesday
 7,12:35-1:05,7/8th grade - Recess - 6th grade - Recess - 5th grade - Recess,Wednesday
 8,1:05-1:25,7/8th grade - Lunch - 6th grade - Lunch - 5th grade - Lunch,Wednesday
 9,1:25-2:10,7/8th grade - Math/Science - 6th grade - Social Studies - 5th grade - Language Arts,Wednesday

@@ -14,7 +14,7 @@
         <div class="panel">
             <h1>Epstein Hillel School</h1>
             <h2></h2>
-            <h4 style="color: #d4d400; font-size: 1.5rem;">Yellow - 8th Special</h4>
+            <h4 style="color: yellow; font-size: 1.5rem;">Yellow - 8th Special</h4>
             <h4 style="color: #e0464d; font-size: 1.5rem;">Red - 7/8th grade</h4>
             <h4 style="color: #425beb; font-size: 1.5rem;">Blue - 6th grade</h4>
             <h4 style="color: #1aa356; font-size: 1.5rem; margin-bottom: 2rem;">Green - 5th grade</h3>
@@ -23,7 +23,7 @@
             {% if day == "Monday" and righttime == details[0][i] %}
             <h2 class="student-subjects">
                 {% if details[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                <h2 class="student-subjects" style="color: yellow; margin-bottom: 0;">8th Special - {{ details[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% endif %}
@@ -35,7 +35,7 @@
             {% if day == "Tuesday" and righttime == details2[0][i] %}
             <h2 class="student-subjects">
                 {% if details2[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details2[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                <h2 class="student-subjects" style="color: yellow; margin-bottom: 0;">8th Special - {{ details2[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details2[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% endif %}
@@ -47,7 +47,7 @@
             {% if day == "Wednesday" and righttime == details3[0][i] %}
             <h2 class="student-subjects">
                 {% if details3[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details3[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                <h2 class="student-subjects" style="color: yellow; margin-bottom: 0;">8th Special - {{ details3[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details3[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% endif %}
@@ -59,7 +59,7 @@
             {% if day == "Thursday" and righttime == details4[0][i] %}
             <h2 class="student-subjects">
                 {% if details4[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details4[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                <h2 class="student-subjects" style="color: yellow; margin-bottom: 0;">8th Special - {{ details4[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details4[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% endif %}
@@ -71,7 +71,7 @@
             {% if day == "Friday" and righttime == details5[0][i] %}
             <h2 class="student-subjects">
                 {% if details5[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                <h2 class="student-subjects" style="color: #d4d400; margin-bottom: 0;">8th Special - {{ details5[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
+                <h2 class="student-subjects" style="color: yellow; margin-bottom: 0;">8th Special - {{ details5[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% else %}
                 <h2 class="student-subjects" style="color: #e0464d; margin-bottom: 0;">7-8th - {{ details5[1][i].split(" - ")[1] | safe }}</h2><br class="student-subjects">
                 {% endif %}
@@ -105,12 +105,12 @@
                         {% for i in range(length) %}
                         <div class="block" 
                         style="{% if day == 'Monday' and righttime == details[0][i] %}
-                        background-color: lightgrey;
+                        background-color: rgba(120, 120, 120, 0.7);
                         {% endif %}">
                             <p>{{ details[0][i] }}</p>
                             <p>
                                 {% if details[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[1] | safe }}</p>
+                                <p style="color: #e6d709; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[1] | safe }}</p>
                                 {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details[1][i].split(" - ")[1] | safe }}</p>
                                 {% endif %}
@@ -125,12 +125,12 @@
                         {% for i in range(length) %}
                         <div class="block" 
                         style="{% if day == 'Tuesday' and righttime == details2[0][i] %}
-                        background-color: lightgrey;
+                        background-color: rgba(120, 120, 120, 0.7);
                         {% endif %}">
                           <p>{{ details2[0][i] }}</p>
                           <p>
                             {% if details2[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                            <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[1] | safe }}</p>
+                            <p style="color: #e6d709; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[1] | safe }}</p>
                             {% else %}
                             <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details2[1][i].split(" - ")[1] | safe }}</p>
                             {% endif %}
@@ -145,12 +145,12 @@
                         {% for i in range(length) %}
                         <div class="block"
                         style="{% if day == 'Wednesday' and righttime == details3[0][i] %}
-                        background-color: lightgrey;
+                        background-color: rgba(120, 120, 120, 0.7);
                         {% endif %}">
                             <p>{{ details3[0][i] }}</p>
                             <p>
                                 {% if details3[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[1] | safe }}</p>
+                                <p style="color: #e6d709; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[1] | safe }}</p>
                                 {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details3[1][i].split(" - ")[1] | safe }}</p>
                                 {% endif %}
@@ -165,12 +165,12 @@
                         {% for i in range(length) %}
                         <div class="block" 
                         style="{% if day == 'Thursday' and righttime == details4[0][i] %}
-                        background-color: lightgrey;
+                        background-color: rgba(120, 120, 120, 0.7);
                         {% endif %}">
                             <p>{{ details4[0][i] }}</p>
                             <p>
                                 {% if details4[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[1] | safe }}</p>
+                                <p style="color: #e6d709; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[1] | safe }}</p>
                                 {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details4[1][i].split(" - ")[1] | safe }}</p>
                                 {% endif %}
@@ -185,12 +185,12 @@
                         {% for i in range(length) %}
                         <div class="block" 
                         style="{% if day == 'Friday' and righttime == details5[0][i] %}
-                        background-color: lightgrey;
+                        background-color: rgba(120, 120, 120, 0.7);
                         {% endif %}">
                             <p>{{ details5[0][i] }}</p>
                             <p>
                                 {% if details5[1][i].split(" - ")[1].find("/") | string != "-1": %}
-                                <p style="color: #d4d400; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[1] | safe }}</p>
+                                <p style="color: #e6d709; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[1] | safe }}</p>
                                 {% else %}
                                 <p style="color: #e0464d; margin-bottom: 2px; font-size: 0.6rem;">{{ details5[1][i].split(" - ")[1] | safe }}</p>
                                 {% endif %}
@@ -218,10 +218,17 @@
                 }
                 if (data["righttime"] == null && ["Monday", "Tuesday", "Wednesday", "Thursday"].includes(data["day"])) {
                     document.querySelectorAll(".student-subjects").forEach(block => block.parentNode.removeChild(block))
+                  if (Number(data["time"].split(":")[0]) < 8) {
+                    var newitem = document.createElement("h2")
+                    newitem.textContent = "Good morning!"
+                    document.querySelector(".panel").appendChild(newitem)
+                    newitem.classList.add("student-subjects")
+                  } else {
                     var newitem = document.createElement("h2")
                     newitem.textContent = "Have a good evening!"
                     document.querySelector(".panel").appendChild(newitem)
                     newitem.classList.add("student-subjects")
+                  }
                 }
                 if (data["righttime"] != null) {
                     document.querySelectorAll(`.${data["day"].toLowerCase()} .block`).forEach(block => {
@@ -236,7 +243,7 @@
                             document.querySelectorAll(".student-subjects").forEach(block => block.parentNode.removeChild(block))
                             if (newParas[2].includes("/") === true) {
                                 var grade8 = document.createElement("h2")
-                                grade8.style = "color: #e0464d; margin-bottom: 0; margin-top: 1rem;"
+                                grade8.style = "color: yellow; margin-bottom: 0; margin-top: 1rem;"
                                 grade8.textContent = "8th Special - " + newParas[2]
                                 grade8.classList.add("student-subjects")
                                 document.querySelector(".panel").appendChild(grade8)
@@ -265,7 +272,7 @@
                 })
                 document.querySelectorAll(`.${data["day"].toLowerCase()} .block`).forEach(block => {
                     if (block.querySelector("p").textContent == data["righttime"]) {
-                        block.style = "background-color: lightgrey;"
+                        block.style = "background-color: rgba(120, 120, 120, 0.7);"
                     } else {
                         block.style = "background-color: none;"
                     }
