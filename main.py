@@ -16,6 +16,7 @@ def in_between(now, start, end):
 def getdata():
   timeinzone = timezone("US/Eastern")
   day = datetime.now(timeinzone).strftime("%A")
+  timenow = datetime.now(timeinzone).time()
   righttime = None
   if day == "Monday":
     for i in data[data.Day == "Monday"].Time.values.tolist():
@@ -28,7 +29,7 @@ def getdata():
           hour1 += 12
         if hour2 < 8:
           hour2 += 12
-        if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+        if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
           righttime = i
           break
   if day == "Tuesday":
@@ -42,7 +43,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Wednesday":
@@ -56,7 +57,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Thursday":
@@ -70,7 +71,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         print(righttime)
         break
@@ -85,7 +86,7 @@ def getdata():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   print(datetime.now(timeinzone).time())
@@ -96,6 +97,7 @@ def home():
   timeinzone = timezone("US/Eastern")
   day = datetime.now(timeinzone).strftime("%A")
   righttime = None
+  timenow = datetime.now(timeinzone).time()
   if day == "Monday":
     for i in data[data.Day == "Monday"].Time.values.tolist():
         split = str(i).split("-")
@@ -107,7 +109,7 @@ def home():
           hour1 += 12
         if hour2 < 8:
           hour2 += 12
-        if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+        if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
           righttime = i
           break
   if day == "Tuesday":
@@ -121,7 +123,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Wednesday":
@@ -135,7 +137,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   if day == "Thursday":
@@ -149,7 +151,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         print(righttime)
         break
@@ -164,7 +166,7 @@ def home():
         hour1 += 12
       if hour2 < 8:
         hour2 += 12
-      if in_between(datetime.now(timeinzone).time(), time(hour1, minute1), time(hour2, minute2)):
+      if in_between(timenow, time(hour1, minute1), time(hour2, minute2)):
         righttime = i
         break
   return render_template("index.html", data=data, length=len(data[data.Day == "Monday"].Class.value_counts().index.tolist()), day=day, timezone=timeinzone, time=datetime.now(timeinzone).strftime("%I:%M"), righttime=righttime)
@@ -178,4 +180,4 @@ def gettime():
 if __name__ == "__main__":
   app.jinja_env.auto_reload = True
   app.config['TEMPLATES_AUTO_RELOAD'] = True
-  socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+  socketio.run(app, host='0.0.0.0', port=8080, debug=True)
