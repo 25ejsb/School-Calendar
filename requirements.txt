@@ -3,3 +3,4 @@ Flask-SocketIO
 pandas
 pytz
 eventlet
+gunicorn
