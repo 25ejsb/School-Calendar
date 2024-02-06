@@ -4,3 +4,4 @@ eventlet
 Flask-SocketIO
 pandas
 pytz
+pyarrow
