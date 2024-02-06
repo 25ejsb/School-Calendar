@@ -1,6 +1,6 @@
 flask
+gunicorn
+eventlet
 Flask-SocketIO
 pandas
 pytz
-eventlet
-gunicorn
